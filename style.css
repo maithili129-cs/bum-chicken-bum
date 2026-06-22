@@ -89,8 +89,9 @@ header {
 .logo-circle {
   width: 50px;
   height: 50px;
+   object-fit: cover;
 
-  border: 3px solid white;
+  
   border-radius: 50%;
 }
 
@@ -556,3 +557,253 @@ footer {
     background:red !important;
 }
 ```
+```css
+/* =========================
+   MENU CATEGORY LIST
+========================= */
+
+.menu-categories{
+    max-width: 800px;
+    margin: 50px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.category-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-decoration: none;
+    color: white;
+
+    background: #181818;
+
+    padding: 22px 30px;
+
+    border-radius: 16px;
+
+    border-left: 5px solid var(--red);
+
+    transition: all 0.3s ease;
+}
+
+.category-card:hover{
+    transform: translateX(8px);
+
+    background: #222;
+
+    border-left-color: var(--yellow);
+}
+
+.category-card h3{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
+}
+
+.category-card::after{
+    content: "➜";
+    font-size: 1.5rem;
+    color: var(--yellow);
+    transition: 0.3s;
+}
+
+.category-card:hover::after{
+    transform: translateX(6px);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .category-card{
+        padding: 18px 20px;
+    }
+
+    .category-card h3{
+        font-size: 1.05rem;
+    }
+
+    .category-card::after{
+        font-size: 1.2rem;
+    }
+}
+```
+```css
+/* MENU PAGE */
+
+.menu-page{
+    min-height:100vh;
+    padding:120px 8%;
+    background:#111;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-bottom:40px;
+
+    text-decoration:none;
+
+    color:var(--yellow);
+
+    border:1px solid var(--yellow);
+
+    padding:12px 24px;
+
+    border-radius:40px;
+}
+
+.dish-list{
+    max-width:800px;
+    margin:40px auto 0;
+}
+
+.dish-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#1b1b1b;
+
+    padding:22px 30px;
+
+    border-radius:12px;
+
+    margin-bottom:18px;
+
+    border-left:4px solid var(--red);
+
+    font-size:1.1rem;
+}
+
+.dish-item:hover{
+    background:#222;
+}
+
+@media(max-width:768px){
+
+    .dish-item{
+        padding:18px;
+        font-size:1rem;
+    }
+}
+
+
+.whatsapp-float{
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+
+    background: #25D366;
+    color: white;
+
+    padding: 14px 20px;
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+
+    z-index: 1000;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover{
+    transform: scale(1.05);
+}
+
+```css
+.review-form-container{
+    max-width: 700px;
+    margin: 70px auto 0;
+    background: #181818;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.review-form-container h3{
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--yellow);
+}
+
+.review-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea{
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #222;
+    color: white;
+    outline: none;
+}
+
+.review-form button{
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: var(--red);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.review-form button:hover{
+    transform: translateY(-3px);
+}
+
+
+/* INSTAGRAM BUTTON */
+
+.instagram-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 25px;
+    padding: 14px 28px;
+
+    background: linear-gradient(
+        45deg,
+        #f09433,
+        #e6683c,
+        #dc2743,
+        #cc2366,
+        #bc1888
+    );
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.instagram-btn i{
+    font-size: 1.3rem;
+}
+
+.instagram-btn:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(220,39,67,0.4);
+}
+
