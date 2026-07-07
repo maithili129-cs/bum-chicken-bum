@@ -20,6 +20,7 @@ body {
   background: #0f0f0f;
   color: #ffffff;
   overflow-x: hidden;
+  width: 400px;
 }
 
 /* =========================
@@ -846,4 +847,23 @@ footer {
         transform:translateY(0px) rotate(-20deg);
     }
 
+}
+
+@media (max-width: 768px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container,
+  section,
+  .hero {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
