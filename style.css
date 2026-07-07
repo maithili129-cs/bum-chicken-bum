@@ -536,7 +536,7 @@ footer {
     font-size: 1rem;
   }
 }
-```css
+
 .hero{
     position: relative;
 }
@@ -551,13 +551,11 @@ footer {
     inset: 0;
     background: rgba(0,0,0,0.55);
 }
-```
-```css
+
 .about-section{
     background:red !important;
 }
-```
-```css
+
 /* =========================
    MENU CATEGORY LIST
 ========================= */
@@ -578,7 +576,7 @@ footer {
     text-decoration: none;
     color: white;
 
-    background: #181818;
+    background: rgb(190, 28, 6);
 
     padding: 22px 30px;
 
@@ -630,8 +628,7 @@ footer {
         font-size: 1.2rem;
     }
 }
-```
-```css
+
 /* MENU PAGE */
 
 .menu-page{
@@ -721,7 +718,7 @@ footer {
     transform: scale(1.05);
 }
 
-```css
+
 .review-form-container{
     max-width: 700px;
     margin: 70px auto 0;
@@ -807,3 +804,46 @@ footer {
     box-shadow: 0 8px 25px rgba(220,39,67,0.4);
 }
 
+/* Decorative Ingredients */
+
+.floating-chili,
+.floating-garlic{
+    position:absolute;
+    width:70px;
+    opacity:0.9;
+    pointer-events:none;
+    animation:float 4s ease-in-out infinite;
+}
+
+.menu-section{
+    position:relative;
+    overflow:hidden;
+}
+
+.floating-chili{
+    top:40px;
+    left:30px;
+    transform:rotate(-20deg);
+}
+
+.floating-garlic{
+    bottom:60px;
+    right:40px;
+    animation-delay:2s;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px) rotate(-20deg);
+    }
+
+    50%{
+        transform:translateY(-15px) rotate(-15deg);
+    }
+
+    100%{
+        transform:translateY(0px) rotate(-20deg);
+    }
+
+}
